@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="back" style="background-image: url({% static 'portfolio/blueground.jpg' %})">
+    <h1>Jordan Experience</h1>
+
+
+
+
+    <br>
+
+  <div class="row justify-content-center my-3">
+    <div class="col-5">
+      <img src="{% static 'portfolio/curacao.jpg' %}" class="img-fluid rounded-circle" >
+    </div>
+</div>
+</div>
+    <br>
+    <div class="container-lg border border-info"></div>
+<br>
+<h2>Python Experience</h2>
+<div class="row justify-content-center my-3">
+<div class="btn-group" role="group" aria-label="Basic example">
+  <a href="{% static 'portfolio/Python Basics Cert.pdf' %}"<button type="button" class="btn btn-primary btn btn-outline-light">Python Basics</button></a>
+  <a href="{% static 'portfolio/Coursera Python Cert.pdf' %}"<button type="button" class="btn btn-primary btn btn-outline-light">Functions Files Dictionaries</button></a>
+  <a href="{% static 'portfolio/Coursera Python Cert 2.pdf' %}"<button type="button" class="btn btn-primary btn btn-outline-light">Data Collection and Processing</button></a>
+  <a href="{% static 'portfolio/Coursera Python Cert 3.pdf' %}"<button type="button" class="btn btn-primary btn btn-outline-light"> Classes and Inheritance</button></a>
+  <a href="{% static 'portfolio/JordanBondResume2020.pdf' %}"<button type="button" class="btn btn-primary btn btn-outline-light">Resume</button></a>
+</div>
+</div>
+<br>
+<br>
+
+    <div class="container-lg border border-info"></div>
+<br>
+<div class="row">
+
+    {% for project in projects %}
+     <div class="col-lg-4 col-md-6">
+    <div class="card text-primary" style="width: 18rem;">
+  <img src="{{ project.image.url }}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ project.title }}</h5>
+    <p class="card-text">{{ project.description }}</p>
+  </div>
+  <div class="card-body">
+    <a href="{% url 'blog:all_blogs' %}" class="card-link"><button type="button" class="btn btn-info">Blog</button></a>
+  </div>
+  </div>
+</div>
+
+
+    {% if project.url %}
+    <a href="{{ project.url }}">Link</a>
+    {% endif %}
+
+    {% endfor %}
+</div>
+{% endblock %}

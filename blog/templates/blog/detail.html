@@ -1,0 +1,66 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<h1>{{ blog.title }}</h1>
+
+
+
+<p>{{ blog.description }}</p>
+
+<div class="card-group text-primary">
+  <div class="card">
+    <img src="{{ blog.image.url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.image_title }}</h5>
+      <p class="card-text">{{ blog.image_description }}</p>
+      <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ blog.image2.url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.image_title2 }}</h5>
+      <p class="card-text">{{ blog.image_description2 }}</p>
+      <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="{{ blog.image3.url }}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ blog.image_title3 }}</h5>
+      <p class="card-text">{{ blog.image_description3 }}</p>
+      <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+    </div>
+  </div>
+  <div class="card-group">
+    <div class="card">
+      <img src="{{ blog.image4.url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ blog.image_title4 }}</h5>
+        <p class="card-text">{{ blog.image_description4 }}</p>
+        <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ blog.image5.url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ blog.image_title5 }}</h5>
+        <p class="card-text">{{ blog.image_description5 }}</p>
+        <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{{ blog.image6.url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ blog.image_title6 }}</h5>
+        <p class="card-text">{{ blog.image_description6 }}</p>
+        <p class="card-text"><small class="text-muted"> {{ blog.date }}</small></p>
+      </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
